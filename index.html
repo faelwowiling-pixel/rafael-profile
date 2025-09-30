@@ -3,40 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rafael's Profile</title>
+  <title>Portofolio Rafael Laurent Wowiling</title>
+
+  <!-- ✅ Meta SEO -->
+  <meta name="description" content="Website portofolio Rafael Laurent Wowiling. Mahasiswa IT-PLN, Web Developer, dan Desainer. Menampilkan profil, keterampilan, sertifikasi, dan informasi kontak.">
+  <meta name="keywords" content="Rafael Laurent Wowiling, portofolio, mahasiswa IT-PLN, web developer, desainer, sertifikasi, kontak">
+  <meta name="author" content="Rafael Laurent Wowiling">
+
+  <!-- ✅ Open Graph (Preview untuk WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:title" content="Portofolio Rafael Laurent Wowiling">
+  <meta property="og:description" content="Lihat profil, keterampilan, dan sertifikasi Rafael Laurent Wowiling.">
+  <meta property="og:image" content="https://faelwowiling-pixel.github.io/rafael-profile//img/profil.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faelwowiling-pixel.github.io/rafael-profile/">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portofolio Rafael Laurent Wowiling">
+  <meta name="twitter:description" content="Mahasiswa IT-PLN, Web Developer, dan Desainer.">
+  <meta name="twitter:image" content="https://username.github.io/repository-name/img/profil.jpg">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    body {
-      transition: background 0.3s, color 0.3s;
-    }
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/profil.jpg') center/cover no-repeat;
-      color: white;
-      padding: 100px 20px;
-    }
-    .certificate-img {
-      max-height: 250px;
-      object-fit: cover;
-    }
-    .dark-mode {
-      background-color: #121212 !important;
-      color: #f1f1f1 !important;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Portofolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,18 +44,16 @@
           <li class="nav-item"><a class="nav-link" href="#certification">Sertifikasi</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
         </ul>
-        <button class="btn btn-outline-light ms-3" onclick="toggleDarkMode()">🌙</button>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero text-center">
+  <section id="home" class="text-center bg-light p-5" style="margin-top: 56px;">
     <div class="container">
-      <img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil">
-      <h1 class="display-5 fw-bold">Rafael Laurent Wowiling</h1>
-      <p class="lead">Mahasiswa | Web Developer | Desainer</p>
-      <div id="clock" class="mb-3"></div>
+      <img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil Rafael Laurent Wowiling">
+      <h1 class="display-5 fw-bold">Halo, Saya Rafael Laurent Wowiling</h1>
+      <p class="lead">Mahasiswa IT-PLN | Web Developer | Desainer</p>
       <a href="#contact" class="btn btn-primary btn-lg mt-2">Hubungi Saya</a>
     </div>
   </section>    
@@ -68,7 +63,7 @@
     <div class="container">
       <h2 class="mb-4 text-center">Tentang Saya</h2>
       <p class="text-center">
-        Saya adalah seorang mahasiswa S1 Teknik Informatika yang berkuliah di Institut Teknologi PLN Jakarta. Saat ini, saya sedang belajar membuat website menggunakan
+        Saya adalah seorang mahasiswa yang sedang belajar membuat website menggunakan
         <strong>HTML, CSS, dan Bootstrap</strong>. Website ini adalah portofolio sederhana 
         untuk menampilkan informasi tentang saya.
       </p>
@@ -113,50 +108,50 @@
         <!-- Sertifikat 1 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate1.jpg" class="card-img-top certificate-img" alt="Sertifikat 1">
+            <img src="img/certificate1.jpg" class="card-img-top" alt="Sertifikat Microsoft Office Specialist">
             <div class="card-body text-center">
               <h5 class="card-title">Microsoft Office Specialist</h5>
-              <p class="card-text">Sertifikasi Microsoft Excel 2019</p>
+              <p class="card-text">Merupakan Sertifikasi Microsoft Excel 2019</p>
             </div>
           </div>
         </div>
         <!-- Sertifikat 2 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate2.jpg" class="card-img-top certificate-img" alt="Sertifikat 2">
+            <img src="img/certificate2.jpg" class="card-img-top" alt="Sertifikat Basic English Education Standardization">
             <div class="card-body text-center">
               <h5 class="card-title">Basic English Education Standardization</h5>
-              <p class="card-text">Sertifikasi Bahasa Inggris oleh LDC Laboratory</p>
+              <p class="card-text">Merupakan Sertifikasi Bahasa Inggris dari LDC Laboratory</p>
             </div>
           </div>
         </div>
         <!-- Sertifikat 3 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate3.jpg" class="card-img-top certificate-img" alt="Sertifikat 3">
+            <img src="img/certificate3.jpg" class="card-img-top" alt="Sertifikat Strategy to Build a Strong Professional Network">
             <div class="card-body text-center">
-              <h5 class="card-title">Professional Network Strategy</h5>
-              <p class="card-text">Sertifikat webinar oleh ESCN Laboratory</p>
+              <h5 class="card-title">Strategy to Build a Strong Professional Network</h5>
+              <p class="card-text">Sertifikat webinar dari ESCN Laboratory</p>
             </div>
           </div>
         </div>
         <!-- Sertifikat 4 -->
         <div class="col-md-6">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate4.jpg" class="card-img-top certificate-img" alt="Sertifikat 4">
+            <img src="img/certificate4.jpg" class="card-img-top" alt="Sertifikat Implementation of AI and Machine Learning">
             <div class="card-body text-center">
-              <h5 class="card-title">AI & Machine Learning for Industry</h5>
-              <p class="card-text">Sertifikat oleh Institut Teknologi PLN</p>
+              <h5 class="card-title">Implementation of Artificial Intelligence and Machine Learning</h5>
+              <p class="card-text">Sertifikat dari Institut Teknologi PLN</p>
             </div>
           </div>
         </div>
         <!-- Sertifikat 5 -->
         <div class="col-md-6">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate5.jpg" class="card-img-top certificate-img" alt="Sertifikat 5">
+            <img src="img/certificate5.jpg" class="card-img-top" alt="Sertifikat R fundamental For Data Science">
             <div class="card-body text-center">
-              <h5 class="card-title">R Fundamental for Data Science</h5>
-              <p class="card-text">Sertifikasi oleh DQ Lab</p>
+              <h5 class="card-title">R fundamental For Data Science</h5>
+              <p class="card-text">Sertifikasi dari DQ Lab</p>
             </div>
           </div>
         </div>
@@ -166,13 +161,15 @@
 
   <!-- Contact Section -->
   <section id="contact" class="p-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4">Kontak & Sosial Media</h2>
-      <p><i class="bi bi-telephone-fill text-primary"></i> <strong>HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
-      <p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
-      <p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6285756963137" target="_blank">Chat via WA</a></p>
-      <p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_?igsh=b3F3cWF2c2NwdGo4" target="_blank">@faellaurentt_</a></p>
-      <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205?_t=ZS-90ACnH7mdcq&_r=1" target="_blank">@yee_1205</a></p>
+    <div class="container">
+      <h2 class="mb-4 text-center">Kontak</h2>
+      <div class="text-center mb-4">
+        <p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
+        <p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
+        <p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6285756963137" target="_blank">Chat via WhatsApp</a></p>
+        <p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_" target="_blank">@faellaurentt_</a></p>
+        <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205" target="_blank">@yee_1205</a></p>
+      </div>
     </div>
   </section>
 
@@ -183,22 +180,5 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    // Dark Mode
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-
-    // Jam Otomatis
-    function updateClock() {
-      const now = new Date();
-      const time = now.toLocaleTimeString();
-      document.getElementById("clock").innerText = "⏰ " + time;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
 </body>
 </html>
-
