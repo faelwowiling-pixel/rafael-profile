@@ -5,22 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rafael Laurent Wowiling | Portofolio</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Portofolio Rafael Laurent Wowiling - Mahasiswa IT-PLN, Web Developer, dan Desainer.">
-  <meta name="keywords" content="Rafael Laurent Wowiling, Portofolio, Mahasiswa IT-PLN, Web Developer, Desainer, Sertifikasi">
-  <meta name="author" content="Rafael Laurent Wowiling">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Portofolio Rafael Laurent Wowiling">
-  <meta property="og:description" content="Website pribadi Rafael Laurent Wowiling - Mahasiswa, Web Developer, dan Desainer.">
-  <meta property="og:image" content="https://faelwowiling-pixel.github.io/rafael-profile/img/profil.jpg">
-  <meta property="og:url" content="https://faelwowiling-pixel.github.io/rafael-profile/">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Custom CSS -->
@@ -30,36 +16,22 @@
       line-height: 1.6;
       transition: background-color 0.5s ease, color 0.5s ease;
     }
-
-    /* Navbar */
     .navbar { transition: background-color 0.5s ease; }
     .navbar .nav-link { color: #fff !important; font-weight: 500; }
     .navbar .nav-link:hover { color: #ffc107 !important; }
-
-    /* Hero */
-    #home {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat;
-      color: #fff; padding: 100px 20px;
-      transition: background-color 0.5s ease, color 0.5s ease;
+    #home { 
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat; 
+      color: #fff; padding: 100px 20px; 
+      transition: background-color 0.5s ease, color 0.5s ease; 
     }
     #home img { border: 4px solid #fff; }
-
-    /* Section Titles */
     h2 { font-weight: bold; color: #333; margin-bottom: 20px; transition: color 0.5s ease; }
-
-    /* Cards */
-    .card { border: none; transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease, color 0.5s ease; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
-
-    /* Certification */
+    .card { border: none; transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease, color 0.5s ease; cursor: pointer; }
+    .card:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
     #certification img { max-height: 220px; object-fit: cover; cursor: pointer; transition: transform 0.3s; }
     #certification img:hover { transform: scale(1.05); }
-
-    /* Contact */
     #contact a { text-decoration: none; transition: color 0.5s ease; }
     #contact a:hover { text-decoration: underline; }
-
-    /* Footer */
     footer { font-size: 14px; letter-spacing: 1px; transition: background-color 0.5s ease, color 0.5s ease; }
 
     /* Dark Mode */
@@ -69,9 +41,15 @@
     body.dark-mode footer { background-color: #1a1a1a; }
     body.dark-mode #home { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat; }
 
-    /* Toggle Button Animation */
     #toggleMode { transition: transform 0.3s ease; }
     #toggleMode:active { transform: rotate(360deg); }
+
+    .modal-dialog { max-width: 90%; }
+    .modal-body img { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+
+    @media (max-width: 767px) {
+      #certification .col-md-4, #certification .col-md-6, #skills .col-md-4 { flex: 0 0 100%; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -112,9 +90,9 @@
     <div class="container">
       <h2 class="mb-4 text-center">Tentang Saya</h2>
       <p class="text-center">
-        Saya adalah seorang Mahasiswa Jurusan S1 Teknik Informatika di Institut Teknologi PLN Jakarta.
-        Saat ini saya sedang belajar membuat website menggunakan <strong>HTML, CSS, dan Bootstrap</strong>.
-        Website ini adalah portofolio sederhana untuk menampilkan informasi tentang saya, keterampilan, serta sertifikasi yang sudah saya capai.
+        Saya adalah Mahasiswa S1 Teknik Informatika di Institut Teknologi PLN Jakarta.
+        Saat ini belajar membuat website menggunakan <strong>HTML, CSS, dan Bootstrap</strong>.
+        Website ini adalah portofolio sederhana untuk menampilkan informasi tentang saya, keterampilan, serta sertifikasi.
       </p>
     </div>
   </section>
@@ -125,36 +103,81 @@
       <h2 class="mb-4 text-center">Skill</h2>
       <div class="row text-center g-4">
         <div class="col-md-4">
-          <div class="card shadow-sm p-4">
+          <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal1">
             <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
             <h4>HTML & CSS</h4>
             <p>Dasar pembuatan website</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card shadow-sm p-4">
+          <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal2">
             <i class="bi bi-bootstrap-fill display-4 text-purple mb-3"></i>
             <h4>Bootstrap</h4>
-            <p>Framework CSS untuk desain responsif</p>
+            <p>Framework CSS responsif</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card shadow-sm p-4">
+          <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal3">
             <i class="bi bi-braces display-4 text-success mb-3"></i>
             <h4>JavaScript</h4>
-            <p>Logika interaktif website</p>
+            <p>Logika interaktif</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certification -->
+  <!-- Skill Modals -->
+  <div class="modal fade" id="skillModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">HTML & CSS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Pengertian:</strong> HTML dan CSS adalah dasar untuk membuat struktur dan tampilan website.</p>
+          <p><strong>Contoh:</strong> Form, layout grid, styling teks, background, animasi sederhana.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="skillModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bootstrap</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Pengertian:</strong> Framework CSS yang memudahkan pembuatan website responsif dengan komponen siap pakai.</p>
+          <p><strong>Contoh:</strong> Navbar, carousel, tombol, form, grid layout, modal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="skillModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">JavaScript</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Pengertian:</strong> Bahasa pemrograman untuk membuat website interaktif dan dinamis.</p>
+          <p><strong>Contoh:</strong> Form validation, slider, dropdown interaktif, animasi, fetch data API.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certification Section -->
   <section id="certification" class="p-5">
     <div class="container">
       <h2 class="mb-4 text-center">Sertifikasi</h2>
       <div class="row g-4">
-
         <!-- Sertifikat 1 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
@@ -164,16 +187,6 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="certModal1" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark">
-              <div class="modal-body text-center">
-                <img src="img/certificate1.jpg" class="img-fluid rounded" alt="Sertifikat 1">
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Sertifikat 2 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
@@ -183,16 +196,6 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark">
-              <div class="modal-body text-center">
-                <img src="img/certificate2.jpg" class="img-fluid rounded" alt="Sertifikat 2">
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Sertifikat 3 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
@@ -202,35 +205,15 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark">
-              <div class="modal-body text-center">
-                <img src="img/certificate3.jpg" class="img-fluid rounded" alt="Sertifikat 3">
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Sertifikat 4 -->
         <div class="col-md-6">
           <div class="card shadow-sm h-100">
             <img src="img/certificate4.jpg" class="card-img-top" alt="Sertifikat 4" data-bs-toggle="modal" data-bs-target="#certModal4">
             <div class="card-body text-center">
-              <h5 class="card-title">Artificial Intelligence & Machine Learning</h5>
+              <h5 class="card-title">Artificial Intelligence & ML</h5>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="certModal4" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark">
-              <div class="modal-body text-center">
-                <img src="img/certificate4.jpg" class="img-fluid rounded" alt="Sertifikat 4">
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Sertifikat 5 -->
         <div class="col-md-6">
           <div class="card shadow-sm h-100">
@@ -240,19 +223,16 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="certModal5" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content bg-dark">
-              <div class="modal-body text-center">
-                <img src="img/certificate5.jpg" class="img-fluid rounded" alt="Sertifikat 5">
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
+
+  <!-- Certification Modals -->
+  <div class="modal fade" id="certModal1" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center"><img src="img/certificate1.jpg" class="img-fluid rounded"></div></div></div></div>
+  <div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center"><img src="img/certificate2.jpg" class="img-fluid rounded"></div></div></div></div>
+  <div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center"><img src="img/certificate3.jpg" class="img-fluid rounded"></div></div></div></div>
+  <div class="modal fade" id="certModal4" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center"><img src="img/certificate4.jpg" class="img-fluid rounded"></div></div></div></div>
+  <div class="modal fade" id="certModal5" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-body text-center"><img src="img/certificate5.jpg" class="img-fluid rounded"></div></div></div></div>
 
   <!-- Contact -->
   <section id="contact" class="p-5 bg-light">
@@ -262,8 +242,8 @@
         <p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
         <p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
         <p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6285756963137" target="_blank">Chat via WhatsApp</a></p>
-        <p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_" target="_blank">@faellaurentt_</a></p>
-        <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205" target="_blank">@yee_1205</a></p>
+        <p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_?igsh=b3F3cWF2c2NwdGo4" target="_blank">@faellaurentt_</a></p>
+        <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205?_t=ZS-90ACnH7mdcq&_r=1" target="_blank">@yee_1205</a></p>
       </div>
       <form class="mx-auto" style="max-width:600px;">
         <div class="mb-3">
@@ -291,7 +271,7 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Dark/Light Mode -->
+  <!-- Dark/Light Mode Script -->
   <script>
     const toggleBtn = document.getElementById("toggleMode");
     const body = document.body;
@@ -313,7 +293,7 @@
           localStorage.setItem("theme", "light");
         }
         body.classList.remove("transitioning");
-      }, 50);
+      }, 100);
     });
   </script>
 </body>
