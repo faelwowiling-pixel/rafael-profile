@@ -88,6 +88,7 @@ body.dark-mode #home { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0
       <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
       <li class="nav-item"><a class="nav-link" href="#certification">Sertifikasi</a></li>
       <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+      <li class="nav-item"><a class="nav-link" href="#hobby">Hobi</a></li>
       <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
     </ul>
     <button id="toggleMode" class="btn btn-sm btn-outline-light ms-3">
@@ -150,22 +151,61 @@ body.dark-mode #home { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0
 </section>
 
 <!-- Skill Modals -->
-<div class="modal fade" id="skillModal1" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">HTML & CSS</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> HTML dan CSS adalah dasar untuk membuat struktur dan tampilan website.</p><p><strong>Contoh:</strong> Form, layout grid, styling teks, background, animasi sederhana.</p></div></div></div></div>
+<div class="modal fade" id="skillModal1" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">HTML & CSS</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<p><strong>Pengertian:</strong> HTML dan CSS adalah dasar untuk membuat struktur dan tampilan website.</p>
+<p><strong>Contoh:</strong> Form, layout grid, styling teks, background, animasi sederhana.</p>
+</div>
+</div>
+</div>
+</div>
 
-<div class="modal fade" id="skillModal2" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> Framework CSS yang memudahkan pembuatan website responsif dengan komponen siap pakai.</p><p><strong>Contoh:</strong> Navbar, carousel, tombol, form, grid layout, modal.</p></div></div></div></div>
+<div class="modal fade" id="skillModal2" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Bootstrap</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<p><strong>Pengertian:</strong> Framework CSS yang memudahkan pembuatan website responsif dengan komponen siap pakai.</p>
+<p><strong>Contoh:</strong> Navbar, carousel, tombol, form, grid layout, modal.</p>
+</div>
+</div>
+</div>
+</div>
 
-<div class="modal fade" id="skillModal3" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">JavaScript</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> Bahasa pemrograman untuk membuat website interaktif dan dinamis.</p><p><strong>Contoh:</strong> Form validation, slider, dropdown interaktif, animasi, fetch data API.</p></div></div></div></div>
+<div class="modal fade" id="skillModal3" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">JavaScript</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<p><strong>Pengertian:</strong> Bahasa pemrograman untuk membuat website interaktif dan dinamis.</p>
+<p><strong>Contoh:</strong> Validasi form, modal interaktif, animasi, efek hover, slider gambar.</p>
+</div>
+</div>
+</div>
+</div>
 
-<!-- Sertifikasi Section -->
+<!-- Certification Section -->
 <section id="certification" class="p-5 fade-in">
 <div class="container">
   <h2 class="mb-4 text-center">Sertifikasi</h2>
   <div class="row g-4">
-    <div class="col-md-4"><div class="card shadow-sm h-100"><img src="img/certificate1.jpg" class="card-img-top" alt="Sertifikat 1" data-bs-toggle="modal" data-bs-target="#certModal1"><div class="card-body text-center"><h5 class="card-title">Microsoft Office Specialist</h5></div></div></div>
-    <div class="col-md-4"><div class="card shadow-sm h-100"><img src="img/certificate2.jpg" class="card-img-top" alt="Sertifikat 2" data-bs-toggle="modal" data-bs-target="#certModal2"><div class="card-body text-center"><h5 class="card-title">Basic English Education</h5></div></div></div>
-    <div class="col-md-4"><div class="card shadow-sm h-100"><img src="img/certificate3.jpg" class="card-img-top" alt="Sertifikat 3" data-bs-toggle="modal" data-bs-target="#certModal3"><div class="card-body text-center"><h5 class="card-title">Professional Networking</h5></div></div></div>
-    <div class="col-md-6"><div class="card shadow-sm h-100"><img src="img/certificate4.jpg" class="card-img-top" alt="Sertifikat 4" data-bs-toggle="modal" data-bs-target="#certModal4"><div class="card-body text-center"><h5 class="card-title">AI & ML</h5></div></div></div>
-    <div class="col-md-6"><div class="card shadow-sm h-100"><img src="img/certificate5.jpg" class="card-img-top" alt="Sertifikat 5" data-bs-toggle="modal" data-bs-target="#certModal5"><div class="card-body text-center"><h5 class="card-title">R Fundamental</h5></div></div></div>
+    <div class="col-md-4"><img src="img/certificate1.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal1" alt="Sertifikat 1"></div>
+    <div class="col-md-4"><img src="img/certificate2.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal2" alt="Sertifikat 2"></div>
+    <div class="col-md-4"><img src="img/certificate3.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal3" alt="Sertifikat 3"></div>
+    <div class="col-md-6"><img src="img/certificate4.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal4" alt="Sertifikat 4"></div>
+    <div class="col-md-6"><img src="img/certificate5.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal5" alt="Sertifikat 5"></div>
   </div>
 </div>
 </section>
@@ -194,6 +234,63 @@ body.dark-mode #home { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0
 <div class="modal fade" id="galleryModal2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery2.jpg"></div></div></div></div>
 <div class="modal fade" id="galleryModal3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery3.jpg"></div></div></div></div>
 
+<!-- Hobby Section -->
+<section id="hobby" class="p-5 fade-in bg-light">
+<div class="container text-center">
+  <h2 class="mb-4">Hobi</h2>
+  <p>Saya menikmati aktivitas di waktu luang berikut:</p>
+  <div class="row g-4 justify-content-center">
+    <!-- Gaming Card -->
+    <div class="col-md-3">
+      <div class="card shadow-sm p-3" data-bs-toggle="modal" data-bs-target="#hobbyModal1">
+        <i class="bi bi-controller display-4 text-primary mb-2"></i>
+        <h5>Gaming</h5>
+        <p>Main game strategi & FPS</p>
+      </div>
+    </div>
+    <!-- Billiard Card -->
+    <div class="col-md-3">
+      <div class="card shadow-sm p-3" data-bs-toggle="modal" data-bs-target="#hobbyModal2">
+        <i class="bi bi-circle-half display-4 text-success mb-2"></i>
+        <h5>Billiard</h5>
+        <p>Senang bermain dan kompetisi lokal</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Hobby Modals -->
+<div class="modal fade" id="hobbyModal1" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Gaming</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body text-center">
+<img src="img/hobby-gaming.jpg" class="img-fluid mb-3" alt="Gaming">
+<p>Saya suka bermain game strategi dan FPS, misal CS:GO, Valorant, dan Mobile Legends. Hobi ini melatih strategi, fokus, dan kerja sama tim.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="hobbyModal2" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Billiard</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body text-center">
+<img src="img/hobby-billiard.jpg" class="img-fluid mb-3" alt="Billiard">
+<p>Saya menikmati bermain billiard, baik untuk bersantai maupun kompetisi lokal. Hobi ini melatih konsentrasi, presisi, dan strategi.</p>
+</div>
+</div>
+</div>
+</div>
+
 <!-- Contact Section -->
 <section id="contact" class="p-5 fade-in bg-light">
 <div class="container">
@@ -216,13 +313,13 @@ body.dark-mode #home { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center p-3 fade-in">
-  <p>&copy; 2025 Rafael Laurent Wowiling | Portofolio</p>
+<p>&copy; 2025 Rafael Laurent Wowiling | Portofolio</p>
 </footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Dark/Light Mode & Scroll Fade-in -->
+<!-- Dark/Light Mode & Fade-in Scroll -->
 <script>
 const toggle = document.getElementById("toggleMode");
 const body = document.body;
@@ -243,6 +340,5 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 }, appearOptions);
 faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
-
 </body>
 </html>
