@@ -5,179 +5,246 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rafael Laurent Wowiling | Portofolio</title>
 
-<!-- Bootstrap CSS & Icons -->
+<!-- SEO Meta -->
+<meta name="description" content="Portofolio Rafael Laurent Wowiling - Mahasiswa IT-PLN, Web Developer, dan Desainer.">
+<meta name="keywords" content="Rafael Laurent Wowiling, Portofolio, Mahasiswa IT-PLN, Web Developer, Desainer, Sertifikasi">
+<meta name="author" content="Rafael Laurent Wowiling">
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <style>
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-html { scroll-behavior: smooth; }
+/* =========================
+   General Styles
+========================= */
+body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; transition: background 0.3s, color 0.3s; }
+.dark-mode { background:#121212; color:#f5f5f5; }
+.navbar .nav-link { color:#fff !important; font-weight:500; }
+.navbar .nav-link:hover { color:#ffc107 !important; }
 
-/* Navbar */
-.navbar { transition: background-color 0.5s ease; }
-.navbar .nav-link { color: #fff !important; font-weight: 500; }
-.navbar .nav-link:hover { color: #ffc107 !important; }
-
-/* Hero Section */
+/* Hero */
 #home { 
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat; 
-  color: #fff; padding: 100px 20px; 
-  transition: background-color 0.5s ease, color 0.5s ease; 
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat; 
+  color:#fff; padding:100px 20px; text-align:center; 
 }
-#home img { border: 4px solid #fff; }
+#home img { border:4px solid #fff; }
 
 /* Section Titles */
-h2 { font-weight: bold; color: #333; margin-bottom: 20px; transition: color 0.5s ease; }
+h2 { font-weight:bold; color:#333; margin-bottom:20px; }
+.dark-mode h2 { color:#f5f5f5; }
 
 /* Cards */
-.card { border: none; transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease, color 0.5s ease; cursor: pointer; }
-.card:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.card { border:none; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.2); }
 
-/* Certification Section */
-#certification img { max-height: 220px; object-fit: cover; cursor: pointer; transition: transform 0.3s; }
-#certification img:hover { transform: scale(1.05); }
+/* Certification */
+#certification img { max-height:220px; object-fit:cover; }
 
-/* Contact Section */
-#contact a { text-decoration: none; transition: color 0.5s ease; }
-#contact a:hover { text-decoration: underline; }
+/* Contact */
+#contact a { text-decoration:none; }
+#contact a:hover { text-decoration:underline; }
 
 /* Footer */
-footer { font-size: 14px; letter-spacing: 1px; transition: background-color 0.5s ease, color 0.5s ease; }
+footer { font-size:14px; letter-spacing:1px; }
 
-/* Dark Mode */
-body.dark-mode { background-color: #121212; color: #e0e0e0; }
-body.dark-mode h2 { color: #fff; }
-body.dark-mode .card { background-color: #1e1e1e; color: #fff; }
-body.dark-mode footer { background-color: #1a1a1a; }
-body.dark-mode #home { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat; }
-
-#toggleMode { transition: transform 0.3s ease; }
-#toggleMode:active { transform: rotate(360deg); }
-
-/* Modal */
-.modal-dialog { max-width: 90%; }
-.modal-body img { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
-
-/* Gallery */
-.gallery-card img { transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
-.gallery-card img:hover { transform: scale(1.05) rotate(1deg); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-/* Fade-in scroll */
-.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+/* Fade-in Scroll */
+.fade-in { opacity:0; transform:translateY(20px); transition:all 1s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
 </style>
+
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
 <div class="container">
-  <a class="navbar-brand fw-bold" href="#">Portofolio</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-      <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
-      <li class="nav-item"><a class="nav-link" href="#certification">Sertifikasi</a></li>
-      <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
-      <li class="nav-item"><a class="nav-link" href="#hobby">Hobi</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-    </ul>
-    <button id="toggleMode" class="btn btn-sm btn-outline-light ms-3">
-      <i class="bi bi-moon-fill"></i>
-    </button>
-  </div>
+<a class="navbar-brand fw-bold" href="#">Portofolio</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
+<li class="nav-item"><a class="nav-link" href="#certification">Sertifikasi</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+<li class="nav-item"><a class="nav-link" href="#hobby">Hobi</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+<li class="nav-item ms-3">
+<button id="toggleMode" class="btn btn-sm btn-secondary"><i class="bi bi-moon-fill"></i></button>
+</li>
+</ul>
+</div>
 </div>
 </nav>
 
-<!-- Hero Section -->
-<section id="home" class="text-center fade-in" style="margin-top:56px;">
-<div class="container">
-  <img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil">
-  <h1 class="display-5 fw-bold">Rafael Laurent Wowiling</h1>
-  <p class="lead">Mahasiswa | Web Developer | Desainer</p>
-  <a href="#contact" class="btn btn-primary btn-lg mt-2">Hubungi Saya</a>
-</div>
+<!-- Hero -->
+<section id="home">
+<img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil Rafael">
+<h1 class="display-5 fw-bold">Rafael Laurent Wowiling</h1>
+<p class="lead">Mahasiswa | Web Developer | Desainer</p>
+<a href="#contact" class="btn btn-primary btn-lg mt-2">Hubungi Saya</a>
 </section>
 
-<!-- About Section -->
+<!-- About -->
 <section id="about" class="p-5 fade-in">
-<div class="container">
-  <h2 class="mb-4 text-center">Tentang Saya</h2>
-  <p class="text-center">
-    Saya adalah Mahasiswa S1 Teknik Informatika di Institut Teknologi PLN Jakarta.
-    Saat ini belajar membuat website menggunakan <strong>HTML, CSS, dan Bootstrap</strong>.
-    Website ini adalah portofolio sederhana untuk menampilkan informasi tentang saya, keterampilan, serta sertifikasi.
-  </p>
+<div class="container text-center">
+<h2>Tentang Saya</h2>
+<p>Saya adalah mahasiswa S1 Teknik Informatika di Institut Teknologi PLN Jakarta. Belajar HTML, CSS, Bootstrap, dan JavaScript. Website ini portofolio sederhana untuk menampilkan keterampilan, sertifikasi, hobi, dan kontak saya.</p>
 </div>
 </section>
 
-<!-- Skills Section -->
+<!-- Skills -->
 <section id="skills" class="p-5 bg-light fade-in">
 <div class="container">
-  <h2 class="mb-4 text-center">Skill</h2>
-  <div class="row text-center g-4">
-    <div class="col-md-4">
-      <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal1">
-        <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
-        <h4>HTML & CSS</h4>
-        <p>Dasar pembuatan website</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal2">
-        <i class="bi bi-bootstrap-fill display-4 text-purple mb-3"></i>
-        <h4>Bootstrap</h4>
-        <p>Framework CSS responsif</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal3">
-        <i class="bi bi-braces display-4 text-success mb-3"></i>
-        <h4>JavaScript</h4>
-        <p>Logika interaktif</p>
-      </div>
-    </div>
-  </div>
+<h2 class="text-center mb-4">Skill</h2>
+<div class="row text-center g-4">
+<div class="col-md-4">
+<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal1">
+<i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+<h4>HTML & CSS</h4>
+<p>Dasar pembuatan website</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal2">
+<i class="bi bi-bootstrap-fill display-4 text-purple mb-3"></i>
+<h4>Bootstrap</h4>
+<p>Framework CSS responsif</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal3">
+<i class="bi bi-braces display-4 text-success mb-3"></i>
+<h4>JavaScript</h4>
+<p>Interaktif website</p>
+</div>
+</div>
+</div>
 </div>
 </section>
 
 <!-- Skill Modals -->
-<div class="modal fade" id="skillModal1" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-lg modal-dialog-centered">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title">HTML & CSS</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+<div class="modal fade" id="skillModal1" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">HTML & CSS</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> HTML & CSS digunakan untuk membangun struktur dan tampilan website.</p><p><strong>Contoh:</strong> Navbar, card, layout grid, typography, tombol.</p></div></div></div></div>
+
+<div class="modal fade" id="skillModal2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> Bootstrap adalah framework CSS untuk membuat website responsif dengan cepat.</p><p><strong>Contoh:</strong> Navbar, card, grid system, tombol interaktif, modal.</p></div></div></div></div>
+
+<div class="modal fade" id="skillModal3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">JavaScript</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> JavaScript digunakan untuk membuat website interaktif.</p><p><strong>Contoh:</strong> Validasi form, slider, modal, animasi dinamis.</p></div></div></div></div>
+
+<!-- Sertifikasi -->
+<section id="certification" class="p-5 fade-in">
+<div class="container">
+<h2 class="text-center mb-4">Sertifikasi</h2>
+<div class="row g-4">
+<div class="col-md-4"><img src="img/certificate1.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal1"></div>
+<div class="col-md-4"><img src="img/certificate2.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal2"></div>
+<div class="col-md-4"><img src="img/certificate3.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal3"></div>
+<div class="col-md-6"><img src="img/certificate4.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal4"></div>
+<div class="col-md-6"><img src="img/certificate5.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal5"></div>
 </div>
-<div class="modal-body">
-<p><strong>Pengertian:</strong> HTML dan CSS adalah dasar untuk membuat struktur dan tampilan website.</p>
-<p><strong>Contoh:</strong> Form, layout grid, styling teks, background, animasi sederhana.</p>
+</div>
+</section>
+
+<!-- Sertifikat Modals -->
+<div class="modal fade" id="certModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate1.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="certModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate2.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="certModal3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate3.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="certModal4"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate4.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="certModal5"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate5.jpg" class="img-fluid"></div></div></div></div>
+
+<!-- Gallery -->
+<section id="gallery" class="p-5 bg-light fade-in">
+<div class="container">
+<h2 class="text-center mb-4">Galeri Foto Diri</h2>
+<div class="row g-4">
+<div class="col-md-4"><img src="img/gallery1.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#galleryModal1"></div>
+<div class="col-md-4"><img src="img/gallery2.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#galleryModal2"></div>
+<div class="col-md-4"><img src="img/gallery3.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#galleryModal3"></div>
+</div>
+</div>
+</section>
+
+<!-- Gallery Modals -->
+<div class="modal fade" id="galleryModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery1.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="galleryModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery2.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="galleryModal3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery3.jpg" class="img-fluid"></div></div></div></div>
+
+<!-- Hobby -->
+<section id="hobby" class="p-5 fade-in bg-light">
+<div class="container text-center">
+<h2 class="mb-4">Hobi</h2>
+<div class="row g-4 justify-content-center">
+<div class="col-md-3">
+<div class="card shadow-sm p-3" data-bs-toggle="modal" data-bs-target="#hobbyModal1">
+<i class="bi bi-controller display-4 text-primary mb-2"></i>
+<h5>Gaming</h5>
+<p>Main game strategi & FPS</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card shadow-sm p-3" data-bs-toggle="modal" data-bs-target="#hobbyModal2">
+<i class="bi bi-circle-half display-4 text-success mb-2"></i>
+<h5>Billiard</h5>
+<p>Kompetisi lokal & santai</p>
 </div>
 </div>
 </div>
+</div>
+</section>
+
+<!-- Hobby Modals -->
+<div class="modal fade" id="hobbyModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Gaming</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="img/hobby-gaming.jpg" class="img-fluid mb-3"><p>Saya suka bermain game strategi dan FPS untuk melatih strategi dan teamwork.</p></div></div></div></div>
+<div class="modal fade" id="hobbyModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Billiard</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="img/hobby-billiard.jpg" class="img-fluid mb-3"><p>Saya menikmati bermain billiard, melatih presisi dan konsentrasi.</p></div></div></div></div>
+
+<!-- Contact -->
+<section id="contact" class="p-5 fade-in bg-light">
+<div class="container">
+<h2 class="mb-4 text-center">Kontak</h2>
+<div class="text-center mb-4">
+<p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
+<p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
+<p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6285756963137" target="_blank">Chat via WhatsApp</a></p>
+<p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_?igsh=b3F3cWF2c2NwdGo4" target="_blank">@faellaurentt_</a></p>
+<p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205?_t=ZS-90ACnH7mdcq&_r=1" target="_blank">@yee_1205</a></p>
 </div>
 
-<div class="modal fade" id="skillModal2" tabindex { body.classList.add("dark-mode"); icon.className="bi bi-sun-fill"; }
+<form class="mx-auto" style="max-width:600px;" action="https://formspree.io/f/mnqxyzab" method="POST">
+<input type="hidden" name="_next" value="thankyou.html">
+<div class="mb-3"><label for="name" class="form-label">Nama</label><input type="text" class="form-control" id="name" name="name" required></div>
+<div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email" name="email" required></div>
+<div class="mb-3"><label for="message" class="form-label">Pesan</label><textarea class="form-control" id="message" name="message" rows="3" required></textarea></div>
+<button type="submit" class="btn btn-primary w-100">Kirim</button>
+</form>
+</section>
 
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 fade-in">
+<p>&copy; 2025 Rafael Laurent Wowiling | Portofolio</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Dark/Light Mode
+const toggle = document.getElementById("toggleMode");
+const body = document.body;
+const icon = toggle.querySelector("i");
+if(localStorage.getItem("mode")==="dark"){ body.classList.add("dark-mode"); icon.className="bi bi-sun-fill"; }
 toggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
-  if(body.classList.contains("dark-mode")) { icon.className="bi bi-sun-fill"; localStorage.setItem("mode","dark"); }
-  else { icon.className="bi bi-moon-fill"; localStorage.setItem("mode","light"); }
+  if(body.classList.contains("dark-mode")){ icon.className="bi bi-sun-fill"; localStorage.setItem("mode","dark"); }
+  else{ icon.className="bi bi-moon-fill"; localStorage.setItem("mode","light"); }
 });
 
 // Fade-in scroll
 const faders = document.querySelectorAll(".fade-in");
-const appearOptions = { threshold: 0.1 };
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("visible"); observer.unobserve(entry.target); } });
+const appearOptions = { threshold:0.1 };
+const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add("visible"); observer.unobserve(entry.target); } });
 }, appearOptions);
 faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
