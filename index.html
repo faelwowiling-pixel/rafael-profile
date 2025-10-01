@@ -17,199 +17,337 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="style.css">
 
+<style>
+/* Dark Mode */
+.dark-mode { background-color: #121212; color: #f5f5f5; }
+.dark-mode .bg-light { background-color: #1e1e1e !important; color: #f5f5f5; }
+.dark-mode .card { background-color: #1e1e1e; color: #f5f5f5; }
+.dark-mode .navbar-dark { background-color: #1a1a1a !important; }
+
+/* Fade-in */
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-<div class="container">
-<a class="navbar-brand fw-bold" href="#">Portofolio</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
-<li class="nav-item"><a class="nav-link" href="#certification">Sertifikasi</a></li>
-<li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
-<li class="nav-item"><a class="nav-link" href="#hobby">Hobi</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-<li class="nav-item ms-3">
-<button id="toggleMode" class="btn btn-sm btn-secondary"><i class="bi bi-moon-fill"></i></button>
-</li>
-</ul>
-</div>
-</div>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Portofolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certification">Sertifikasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hobby">Hobi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        <li class="nav-item ms-3">
+          <button id="toggleMode" class="btn btn-sm btn-secondary"><i class="bi bi-moon-fill"></i></button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <!-- Hero -->
-<section id="home" class="text-center fade-in">
-<img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil Rafael">
-<h1 class="display-5 fw-bold">Rafael Laurent Wowiling</h1>
-<p class="lead">Mahasiswa | Web Developer | Desainer</p>
-<a href="#contact" class="btn btn-primary btn-lg mt-2">Hubungi Saya</a>
+<section id="home" class="text-center fade-in pt-5 mt-5">
+  <img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil Rafael">
+  <h1 class="display-5 fw-bold">Rafael Laurent Wowiling</h1>
+  <p class="lead">Mahasiswa | Web Developer | Desainer</p>
+  <a href="#contact" class="btn btn-primary btn-lg mt-2">Hubungi Saya</a>
 </section>
 
 <!-- About -->
 <section id="about" class="p-5 fade-in">
-<div class="container text-center">
-<h2>Tentang Saya</h2>
-<p>Saya adalah mahasiswa S1 Teknik Informatika di Institut Teknologi PLN Jakarta. Belajar HTML, CSS, Bootstrap, dan JavaScript. Website ini portofolio sederhana untuk menampilkan keterampilan, sertifikasi, hobi, dan kontak saya.</p>
-</div>
+  <div class="container text-center">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah mahasiswa S1 Teknik Informatika di Institut Teknologi PLN Jakarta. Belajar HTML, CSS, Bootstrap, dan JavaScript. Website ini portofolio sederhana untuk menampilkan keterampilan, sertifikasi, hobi, dan kontak saya.</p>
+  </div>
 </section>
 
 <!-- Skills -->
 <section id="skills" class="p-5 bg-light fade-in">
-<div class="container">
-<h2 class="text-center mb-4">Skill</h2>
-<div class="row text-center g-4">
-<div class="col-md-4">
-<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal1">
-<i class="bi bi-code-slash display-4 text-primary mb-3"></i>
-<h4>HTML & CSS</h4>
-<p>Dasar pembuatan website</p>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal2">
-<i class="bi bi-bootstrap-fill display-4 text-purple mb-3"></i>
-<h4>Bootstrap</h4>
-<p>Framework CSS responsif</p>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal3">
-<i class="bi bi-braces display-4 text-success mb-3"></i>
-<h4>JavaScript</h4>
-<p>Interaktif website</p>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <h2 class="text-center mb-4">Skill</h2>
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal1">
+          <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+          <h4>HTML & CSS</h4>
+          <p>Dasar pembuatan website</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal2">
+          <i class="bi bi-bootstrap-fill display-4 text-purple mb-3"></i>
+          <h4>Bootstrap</h4>
+          <p>Framework CSS responsif</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#skillModal3">
+          <i class="bi bi-braces display-4 text-success mb-3"></i>
+          <h4>JavaScript</h4>
+          <p>Interaktif website</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Skill Modals -->
-<div class="modal fade" id="skillModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">HTML & CSS</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> HTML & CSS digunakan untuk membangun struktur dan tampilan website.</p><p><strong>Contoh:</strong> Navbar, card, layout grid, typography, tombol.</p></div></div></div></div>
-<div class="modal fade" id="skillModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> Bootstrap adalah framework CSS untuk membuat website responsif dengan cepat.</p><p><strong>Contoh:</strong> Navbar, card, grid system, tombol interaktif, modal.</p></div></div></div></div>
-<div class="modal fade" id="skillModal3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">JavaScript</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> JavaScript digunakan untuk membuat website interaktif.</p><p><strong>Contoh:</strong> Validasi form, slider, modal, animasi dinamis.</p></div></div></div></div>
+<div class="modal fade" id="skillModal1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">HTML & CSS</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body"><p><strong>Pengertian:</strong> HTML & CSS digunakan untuk membangun struktur dan tampilan website.</p><p><strong>Contoh:</strong> Navbar, card, layout grid, typography, tombol.</p></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="skillModal2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body"><p><strong>Pengertian:</strong> Bootstrap adalah framework CSS untuk membuat website responsif dengan cepat.</p><p><strong>Contoh:</strong> Navbar, card, grid system, tombol interaktif, modal.</p></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="skillModal3">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">JavaScript</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body"><p><strong>Pengertian:</strong> JavaScript digunakan untuk membuat website interaktif.</p><p><strong>Contoh:</strong> Validasi form, slider, modal, animasi dinamis.</p></div>
+    </div>
+  </div>
+</div>
 
 <!-- Sertifikasi -->
 <section id="certification" class="p-5 fade-in">
-<div class="container">
-<h2 class="text-center mb-4">Sertifikasi</h2>
-<div class="row g-4">
-<div class="col-md-4"><img src="img/certificate1.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal1"></div>
-<div class="col-md-4"><img src="img/certificate2.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal2"></div>
-<div class="col-md-4"><img src="img/certificate3.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal3"></div>
-<div class="col-md-6"><img src="img/certificate4.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal4"></div>
-<div class="col-md-6"><img src="img/certificate5.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal5"></div>
-</div>
-</div>
+  <div class="container">
+    <h2 class="text-center mb-4">Sertifikasi</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/certificate1.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal1" alt="Sertifikat 1">
+          <div class="card-body"><h5 class="card-title">Web Development Basics</h5></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/certificate2.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal2" alt="Sertifikat 2">
+          <div class="card-body"><h5 class="card-title">Bootstrap Mastery</h5></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/certificate3.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal3" alt="Sertifikat 3">
+          <div class="card-body"><h5 class="card-title">JavaScript Interaktif</h5></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="img/certificate4.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal4" alt="Sertifikat 4">
+          <div class="card-body"><h5 class="card-title">UI/UX Design Fundamentals</h5></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="img/certificate5.jpg" class="img-fluid shadow rounded" data-bs-toggle="modal" data-bs-target="#certModal5" alt="Sertifikat 5">
+          <div class="card-body"><h5 class="card-title">Advanced Web Development</h5></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Sertifikat Modals -->
-<div class="modal fade" id="certModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate1.jpg" class="img-fluid"></div></div></div></div>
-<div class="modal fade" id="certModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate2.jpg" class="img-fluid"></div></div></div></div>
-<div class="modal fade" id="certModal3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate3.jpg" class="img-fluid"></div></div></div></div>
-<div class="modal fade" id="certModal4"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate4.jpg" class="img-fluid"></div></div></div></div>
-<div class="modal fade" id="certModal5"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate5.jpg" class="img-fluid"></div></div></div></div>
+<!-- Modal Sertifikat -->
+<div class="modal fade" id="certModal1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0 text-center">
+        <img src="img/certificate1.jpg" class="img-fluid" alt="Sertifikat 1">
+        <h5 class="mt-2">Web Development Basics</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="certModal2">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0 text-center">
+        <img src="img/certificate2.jpg" class="img-fluid" alt="Sertifikat 2">
+        <h5 class="mt-2">Bootstrap Mastery</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="certModal3">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0 text-center">
+        <img src="img/certificate3.jpg" class="img-fluid" alt="Sertifikat 3">
+        <h5 class="mt-2">JavaScript Interaktif</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="certModal4">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0 text-center">
+        <img src="img/certificate4.jpg" class="img-fluid" alt="Sertifikat 4">
+        <h5 class="mt-2">UI/UX Design Fundamentals</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="certModal5">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0 text-center">
+        <img src="img/certificate5.jpg" class="img-fluid" alt="Sertifikat 5">
+        <h5 class="mt-2">Advanced Web Development</h5>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Galeri -->
 <section id="gallery" class="p-5 bg-light fade-in">
-<div class="container">
-<h2 class="text-center mb-4">Galeri Foto</h2>
-<div class="row g-4">
-<div class="col-md-4"><div class="card shadow-sm"><img src="img/foto1.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#photo1" alt="Foto 1"></div></div>
-<div class="col-md-4"><div class="card shadow-sm"><img src="img/foto2.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#photo2" alt="Foto 2"></div></div>
-<div class="col-md-4"><div class="card shadow-sm"><img src="img/foto3.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#photo3" alt="Foto 3"></div></div>
-</div>
-</div>
+  <div class="container">
+    <h2 class="text-center mb-4">Galeri Foto</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/foto1.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#photo1" alt="Foto 1">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/foto2.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#photo2" alt="Foto 2">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/foto3.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#photo3" alt="Foto 3">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Photo Modals -->
-<div class="modal fade" id="photo1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto1.jpg" class="img-fluid" alt="Foto 1"></div></div></div></div>
-<div class="modal fade" id="photo2"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto2.jpg" class="img-fluid" alt="Foto 2"></div></div></div></div>
-<div class="modal fade" id="photo3"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto3.jpg" class="img-fluid" alt="Foto 3"></div></div></div></div>
+<div class="modal fade" id="photo1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="img/foto1.jpg" class="img-fluid" alt="Foto 1">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="photo2">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="img/foto2.jpg" class="img-fluid" alt="Foto 2">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="photo3">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="img/foto3.jpg" class="img-fluid" alt="Foto 3">
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Hobi -->
 <section id="hobby" class="p-5 fade-in">
-<div class="container">
-<h2 class="text-center mb-4">Hobi</h2>
-<div class="row text-center g-4">
-<div class="col-md-6">
-<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobbyGameModal">
-<i class="bi bi-controller display-4 text-primary mb-2"></i>
-<h4>Main Game</h4>
-<p>Saya suka bermain game untuk refresh pikiran</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobbyBilliardModal">
-<i class="bi bi-circle-fill display-4 text-success mb-2"></i>
-<h4>Billiard</h4>
-<p>Billiard melatih fokus dan ketelitian</p>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <h2 class="text-center mb-4">Hobi</h2>
+    <div class="row text-center g-4">
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobbyGameModal">
+          <i class="bi bi-controller display-4 text-primary mb-2"></i>
+          <h4>Main Game</h4>
+          <p>Saya suka bermain game untuk refresh pikiran</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobbyBilliardModal">
+          <i class="bi bi-circle-fill display-4 text-success mb-2"></i>
+          <h4>Billiard</h4>
+          <p>Billiard melatih fokus dan ketelitian</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Hobby Modals -->
 <div class="modal fade" id="hobbyGameModal">
-<div class="modal-dialog modal-dialog-centered modal-lg">
-<div class="modal-content">
-<div class="modal-body p-0">
-<img src="img/hobby-gaming.jpg" class="img-fluid" alt="Hobi Game">
-<div class="p-3">
-<h5>Main Game</h5>
-<p>Saya suka bermain game untuk refresh pikiran dan strategi berpikir. Contohnya Valorant, Mobile Legends, dan Chess. Game juga melatih koordinasi dan kerja sama tim.</p>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="img/hobby-gaming.jpg" class="img-fluid" alt="Hobi Game">
+        <div class="p-3">
+          <h5>Main Game</h5>
+          <p>Saya suka bermain game untuk refresh pikiran dan strategi berpikir. Contohnya Valorant, Mobile Legends, dan Chess. Game juga melatih koordinasi dan kerja sama tim.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-
 <div class="modal fade" id="hobbyBilliardModal">
-<div class="modal-dialog modal-dialog-centered modal-lg">
-<div class="modal-content">
-<div class="modal-body p-0">
-<img src="img/hobby-billiard.jpg" class="img-fluid" alt="Hobi Billiard">
-<div class="p-3">
-<h5>Billiard</h5>
-<p>Billiard melatih fokus dan ketelitian. Saya sering bermain dengan teman di akhir pekan untuk bersenang-senang sekaligus melatih strategi dan konsentrasi.</p>
-</div>
-</div>
-</div>
-</div>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="img/hobby-billiard.jpg" class="img-fluid" alt="Hobi Billiard">
+        <div class="p-3">
+          <h5>Billiard</h5>
+          <p>Billiard melatih fokus dan ketelitian. Saya sering bermain dengan teman di akhir pekan untuk bersenang-senang sekaligus melatih strategi dan konsentrasi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Contact -->
 <section id="contact" class="p-5 bg-light fade-in">
-<div class="container">
-<h2 class="mb-4 text-center">Kontak</h2>
-<div class="text-center mb-4">
-<p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
-<p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
-<p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6285756963137" target="_blank">Chat via WhatsApp</a></p>
-<p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_?igsh=b3F3cWF2c2NwdGo4" target="_blank">@faellaurentt_</a></p>
-<p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205?_t=ZS-90ACnH7mdcq&_r=1" target="_blank">@yee_1205</a></p>
-</div>
+  <div class="container">
+    <h2 class="mb-4 text-center">Kontak</h2>
+    <div class="text-center mb-4">
+      <p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
+      <p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
+      <p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6285756963137" target="_blank">Chat via WhatsApp</a></p>
+      <p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_?igsh=b3F3cWF2c2NwdGo4" target="_blank">@faellaurentt_</a></p>
+      <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205?_t=ZS-90ACnH7mdcq&_r=1" target="_blank">@yee_1205</a></p>
+    </div>
 
-<form class="mx-auto" style="max-width:600px;" action="https://formspree.io/f/mdkwgryq" method="POST">
-<input type="hidden" name="_next" value="thankyou.html">
-<div class="mb-3"><label class="form-label">Nama</label><input type="text" name="name" class="form-control" required></div>
-<div class="mb-3"><label class="form-label">Email</label><input type="email" name="email" class="form-control" required></div>
-<div class="mb-3"><label class="form-label">Pesan</label><textarea name="message" rows="3" class="form-control" required></textarea></div>
-<button type="submit" class="btn btn-primary w-100">Kirim</button>
-</form>
-</div>
+    <form class="mx-auto" style="max-width:600px;" action="https://formspree.io/f/mdkwgryq" method="POST">
+      <input type="hidden" name="_next" value="thankyou.html">
+      <div class="mb-3"><label class="form-label">Nama</label><input type="text" name="name" class="form-control" required></div>
+      <div class="mb-3"><label class="form-label">Email</label><input type="email" name="email" class="form-control" required></div>
+      <div class="mb-3"><label class="form-label">Pesan</label><textarea name="message" rows="3" class="form-control" required></textarea></div>
+      <button type="submit" class="btn btn-primary w-100">Kirim</button>
+    </form>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center p-3">
-<p>&copy; 2025 Rafael Laurent Wowiling | Portofolio</p>
+  <p>&copy; 2025 Rafael Laurent Wowiling | Portofolio</p>
 </footer>
 
 <!-- Bootstrap JS -->
@@ -219,14 +357,19 @@
 // Dark/Light Mode
 const toggleBtn = document.getElementById('toggleMode');
 toggleBtn.addEventListener('click', () => {
-document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('dark-mode');
 });
 
 // Fade-in scroll
 const faders = document.querySelectorAll('.fade-in');
 const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
 const appearOnScroll = new IntersectionObserver((entries, observer)=>{
-entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }});
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
 }, appearOptions);
 faders.forEach(fader=>{ appearOnScroll.observe(fader); });
 </script>
