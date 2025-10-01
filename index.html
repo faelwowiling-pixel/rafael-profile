@@ -17,41 +17,6 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="style.css">
 
-<style>
-body { font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif; line-height:1.6; transition: background 0.3s, color 0.3s; }
-.dark-mode { background:#121212; color:#f5f5f5; }
-.navbar .nav-link { color:#fff !important; font-weight:500; }
-.navbar .nav-link:hover { color:#ffc107 !important; }
-
-/* Hero */
-#home { 
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat; 
-  color:#fff; padding:100px 20px; text-align:center; 
-}
-#home img { border:4px solid #fff; }
-
-/* Section Titles */
-h2 { font-weight:bold; color:#333; margin-bottom:20px; }
-.dark-mode h2 { color:#f5f5f5; }
-
-/* Cards */
-.card { border:none; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
-.card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.2); }
-
-/* Certification */
-#certification img { max-height:220px; object-fit:cover; cursor:pointer; }
-
-/* Contact */
-#contact a { text-decoration:none; }
-#contact a:hover { text-decoration:underline; }
-
-/* Footer */
-footer { font-size:14px; letter-spacing:1px; }
-
-/* Fade-in Scroll */
-.fade-in { opacity:0; transform:translateY(20px); transition:all 1s ease; }
-.fade-in.visible { opacity:1; transform:translateY(0); }
-</style>
 </head>
 <body>
 
@@ -80,7 +45,7 @@ footer { font-size:14px; letter-spacing:1px; }
 </nav>
 
 <!-- Hero -->
-<section id="home">
+<section id="home" class="text-center fade-in">
 <img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil Rafael">
 <h1 class="display-5 fw-bold">Rafael Laurent Wowiling</h1>
 <p class="lead">Mahasiswa | Web Developer | Desainer</p>
@@ -126,23 +91,9 @@ footer { font-size:14px; letter-spacing:1px; }
 </section>
 
 <!-- Skill Modals -->
-<div class="modal fade" id="skillModal1" tabindex="-1">
-<div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-<div class="modal-header"><h5 class="modal-title">HTML & CSS</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-<div class="modal-body"><p><strong>Pengertian:</strong> HTML & CSS digunakan untuk membangun struktur dan tampilan website.</p><p><strong>Contoh:</strong> Navbar, card, layout grid, typography, tombol.</p></div>
-</div></div></div>
-
-<div class="modal fade" id="skillModal2" tabindex="-1">
-<div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-<div class="modal-header"><h5 class="modal-title">Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-<div class="modal-body"><p><strong>Pengertian:</strong> Bootstrap adalah framework CSS untuk membuat website responsif dengan cepat.</p><p><strong>Contoh:</strong> Navbar, card, grid system, tombol interaktif, modal.</p></div>
-</div></div></div>
-
-<div class="modal fade" id="skillModal3" tabindex="-1">
-<div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-<div class="modal-header"><h5 class="modal-title">JavaScript</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-<div class="modal-body"><p><strong>Pengertian:</strong> JavaScript digunakan untuk membuat website interaktif.</p><p><strong>Contoh:</strong> Validasi form, slider, modal, animasi dinamis.</p></div>
-</div></div></div>
+<div class="modal fade" id="skillModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">HTML & CSS</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> HTML & CSS digunakan untuk membangun struktur dan tampilan website.</p><p><strong>Contoh:</strong> Navbar, card, layout grid, typography, tombol.</p></div></div></div></div>
+<div class="modal fade" id="skillModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> Bootstrap adalah framework CSS untuk membuat website responsif dengan cepat.</p><p><strong>Contoh:</strong> Navbar, card, grid system, tombol interaktif, modal.</p></div></div></div></div>
+<div class="modal fade" id="skillModal3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">JavaScript</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>Pengertian:</strong> JavaScript digunakan untuk membuat website interaktif.</p><p><strong>Contoh:</strong> Validasi form, slider, modal, animasi dinamis.</p></div></div></div></div>
 
 <!-- Sertifikasi -->
 <section id="certification" class="p-5 fade-in">
@@ -165,7 +116,7 @@ footer { font-size:14px; letter-spacing:1px; }
 <div class="modal fade" id="certModal4"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate4.jpg" class="img-fluid"></div></div></div></div>
 <div class="modal fade" id="certModal5"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate5.jpg" class="img-fluid"></div></div></div></div>
 
-<!-- Galeri Foto -->
+<!-- Galeri -->
 <section id="gallery" class="p-5 bg-light fade-in">
 <div class="container">
 <h2 class="text-center mb-4">Galeri Foto</h2>
@@ -182,45 +133,62 @@ footer { font-size:14px; letter-spacing:1px; }
 <div class="modal fade" id="photo2"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto2.jpg" class="img-fluid" alt="Foto 2"></div></div></div></div>
 <div class="modal fade" id="photo3"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto3.jpg" class="img-fluid" alt="Foto 3"></div></div></div></div>
 
-<!-- Hobi Modals -->
-<!-- Modal Game -->
-<div class="modal fade" id="hobbyGameModal">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-body p-0">
-        <img src="img/hobby-gaming.jpg" class="img-fluid" alt="Hobi Game">
-        <div class="p-3">
-          <h5>Main Game</h5>
-          <p>Saya suka bermain game untuk refresh pikiran dan strategi berpikir. Contohnya Valorant, Mobile Legends, dan Chess. Game juga melatih koordinasi dan kerja sama tim.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- Hobi -->
+<section id="hobby" class="p-5 fade-in">
+<div class="container">
+<h2 class="text-center mb-4">Hobi</h2>
+<div class="row text-center g-4">
+<div class="col-md-6">
+<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobbyGameModal">
+<i class="bi bi-controller display-4 text-primary mb-2"></i>
+<h4>Main Game</h4>
+<p>Saya suka bermain game untuk refresh pikiran</p>
 </div>
-
-<!-- Modal Billiard -->
-<div class="modal fade" id="hobbyBilliardModal">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-body p-0">
-        <img src="img/hobby-billiard.jpg" class="img-fluid" alt="Hobi Billiard">
-        <div class="p-3">
-          <h5>Billiard</h5>
-          <p>Billiard melatih fokus dan ketelitian. Saya sering bermain dengan teman di akhir pekan untuk bersenang-senang sekaligus melatih strategi dan konsentrasi.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+<div class="col-md-6">
+<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobbyBilliardModal">
+<i class="bi bi-circle-fill display-4 text-success mb-2"></i>
+<h4>Billiard</h4>
+<p>Billiard melatih fokus dan ketelitian</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 
 <!-- Hobby Modals -->
-<div class="modal fade" id="hobby1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/hobby-gaming.jpg" class="img-fluid mb-3"><p class="p-3">Saya suka bermain game untuk refresh dan strategi berpikir. Contoh: Valorant, Mobile Legends, Chess.</p></div></div></div></div>
-<div class="modal fade" id="hobby2"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/hobby-billiard.jpg" class="img-fluid mb-3"><p class="p-3">Billiard melatih fokus dan ketelitian. Sering bermain dengan teman di akhir pekan.</p></div></div></div></div>
+<div class="modal fade" id="hobbyGameModal">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+<div class="modal-body p-0">
+<img src="img/hobby-gaming.jpg" class="img-fluid" alt="Hobi Game">
+<div class="p-3">
+<h5>Main Game</h5>
+<p>Saya suka bermain game untuk refresh pikiran dan strategi berpikir. Contohnya Valorant, Mobile Legends, dan Chess. Game juga melatih koordinasi dan kerja sama tim.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="hobbyBilliardModal">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+<div class="modal-body p-0">
+<img src="img/hobby-billiard.jpg" class="img-fluid" alt="Hobi Billiard">
+<div class="p-3">
+<h5>Billiard</h5>
+<p>Billiard melatih fokus dan ketelitian. Saya sering bermain dengan teman di akhir pekan untuk bersenang-senang sekaligus melatih strategi dan konsentrasi.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- Contact -->
 <section id="contact" class="p-5 bg-light fade-in">
 <div class="container">
-<h2 class="text-center mb-4">Kontak</h2>
+<h2 class="mb-4 text-center">Kontak</h2>
 <div class="text-center mb-4">
 <p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
 <p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
@@ -236,6 +204,7 @@ footer { font-size:14px; letter-spacing:1px; }
 <div class="mb-3"><label class="form-label">Pesan</label><textarea name="message" rows="3" class="form-control" required></textarea></div>
 <button type="submit" class="btn btn-primary w-100">Kirim</button>
 </form>
+</div>
 </section>
 
 <!-- Footer -->
@@ -245,10 +214,13 @@ footer { font-size:14px; letter-spacing:1px; }
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
 // Dark/Light Mode
 const toggleBtn = document.getElementById('toggleMode');
-toggleBtn.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
+toggleBtn.addEventListener('click', () => {
+document.body.classList.toggle('dark-mode');
+});
 
 // Fade-in scroll
 const faders = document.querySelectorAll('.fade-in');
@@ -261,4 +233,3 @@ faders.forEach(fader=>{ appearOnScroll.observe(fader); });
 
 </body>
 </html>
-
