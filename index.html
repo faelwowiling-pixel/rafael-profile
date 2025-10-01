@@ -182,26 +182,36 @@ footer { font-size:14px; letter-spacing:1px; }
 <div class="modal fade" id="photo2"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto2.jpg" class="img-fluid" alt="Foto 2"></div></div></div></div>
 <div class="modal fade" id="photo3"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto3.jpg" class="img-fluid" alt="Foto 3"></div></div></div></div>
 
-<!-- Hobi -->
-<section id="hobby" class="p-5 fade-in">
-<div class="container">
-<h2 class="text-center mb-4">Hobi</h2>
-<div class="row text-center g-4">
-<div class="col-md-6">
-<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobby1">
-<img src="img/hobby-gaming.jpg" class="img-fluid rounded mb-3" alt="Main Game">
-<h4>Main Game</h4>
+<!-- Hobi Modals -->
+<!-- Modal Game -->
+<div class="modal fade" id="hobbyGameModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="img/hobby-gaming.jpg" class="img-fluid" alt="Hobi Game">
+        <div class="p-3">
+          <h5>Main Game</h5>
+          <p>Saya suka bermain game untuk refresh pikiran dan strategi berpikir. Contohnya Valorant, Mobile Legends, dan Chess. Game juga melatih koordinasi dan kerja sama tim.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Modal Billiard -->
+<div class="modal fade" id="hobbyBilliardModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="img/hobby-billiard.jpg" class="img-fluid" alt="Hobi Billiard">
+        <div class="p-3">
+          <h5>Billiard</h5>
+          <p>Billiard melatih fokus dan ketelitian. Saya sering bermain dengan teman di akhir pekan untuk bersenang-senang sekaligus melatih strategi dan konsentrasi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="col-md-6">
-<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobby2">
-<img src="img/hobby-billiard.jpg" class="img-fluid rounded mb-3" alt="Billiard">
-<h4>Billiard</h4>
-</div>
-</div>
-</div>
-</div>
-</section>
 
 <!-- Hobby Modals -->
 <div class="modal fade" id="hobby1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-body p-0"><img src="img/hobby-gaming.jpg" class="img-fluid mb-3"><p class="p-3">Saya suka bermain game untuk refresh dan strategi berpikir. Contoh: Valorant, Mobile Legends, Chess.</p></div></div></div></div>
@@ -251,3 +261,4 @@ faders.forEach(fader=>{ appearOnScroll.observe(fader); });
 
 </body>
 </html>
+
