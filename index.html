@@ -10,7 +10,7 @@
   <meta name="keywords" content="Rafael Laurent Wowiling, Portofolio, Mahasiswa IT-PLN, Web Developer, Desainer, Sertifikasi">
   <meta name="author" content="Rafael Laurent Wowiling">
 
-  <!-- Open Graph (untuk media sosial: WA, IG, FB) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Portofolio Rafael Laurent Wowiling">
   <meta property="og:description" content="Website pribadi Rafael Laurent Wowiling - Mahasiswa, Web Developer, dan Desainer.">
   <meta property="og:image" content="https://faelwowiling-pixel.github.io/rafael-profile/img/profil.jpg">
@@ -23,16 +23,63 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- CSS Kustom -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* Navbar */
+    .navbar { transition: background-color 0.5s ease; }
+    .navbar .nav-link { color: #fff !important; font-weight: 500; }
+    .navbar .nav-link:hover { color: #ffc107 !important; }
+
+    /* Hero */
+    #home {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat;
+      color: #fff; padding: 100px 20px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    #home img { border: 4px solid #fff; }
+
+    /* Section Titles */
+    h2 { font-weight: bold; color: #333; margin-bottom: 20px; transition: color 0.5s ease; }
+
+    /* Cards */
+    .card { border: none; transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease, color 0.5s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+
+    /* Certification */
+    #certification img { max-height: 220px; object-fit: cover; cursor: pointer; transition: transform 0.3s; }
+    #certification img:hover { transform: scale(1.05); }
+
+    /* Contact */
+    #contact a { text-decoration: none; transition: color 0.5s ease; }
+    #contact a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { font-size: 14px; letter-spacing: 1px; transition: background-color 0.5s ease, color 0.5s ease; }
+
+    /* Dark Mode */
+    body.dark-mode { background-color: #121212; color: #e0e0e0; }
+    body.dark-mode h2 { color: #fff; }
+    body.dark-mode .card { background-color: #1e1e1e; color: #fff; }
+    body.dark-mode footer { background-color: #1a1a1a; }
+    body.dark-mode #home { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("img/bg-hero.jpg") center/cover no-repeat; }
+
+    /* Toggle Button Animation */
+    #toggleMode { transition: transform 0.3s ease; }
+    #toggleMode:active { transform: rotate(360deg); }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Portofolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -43,33 +90,37 @@
           <li class="nav-item"><a class="nav-link" href="#certification">Sertifikasi</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
         </ul>
+        <!-- Tombol Dark/Light -->
+        <button id="toggleMode" class="btn btn-sm btn-outline-light ms-3">
+          <i class="bi bi-moon-fill"></i>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="text-center bg-light p-5" style="margin-top: 56px;">
+  <!-- Hero -->
+  <section id="home" class="text-center" style="margin-top:56px;">
     <div class="container">
-      <img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil Rafael Laurent Wowiling">
+      <img src="img/profil.jpg" class="rounded-circle mb-3 shadow" width="150" alt="Foto Profil">
       <h1 class="display-5 fw-bold">Rafael Laurent Wowiling</h1>
       <p class="lead">Mahasiswa | Web Developer | Desainer</p>
       <a href="#contact" class="btn btn-primary btn-lg mt-2">Hubungi Saya</a>
     </div>
-  </section>    
+  </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="p-5">
     <div class="container">
       <h2 class="mb-4 text-center">Tentang Saya</h2>
       <p class="text-center">
-        Saya adalah seorang Mahasiswa Jurusan S1 Teknik Informatika yang berkuliah di Institut Teknologi PLN Jakarta, Saat ini saya sedang belajar membuat website menggunakan
-        <strong>HTML, CSS, dan Bootstrap</strong>. Website ini adalah portofolio sederhana 
-        untuk menampilkan informasi tentang saya, keterampilan, serta sertifikasi yang sudah saya capai.
+        Saya adalah seorang Mahasiswa Jurusan S1 Teknik Informatika di Institut Teknologi PLN Jakarta.
+        Saat ini saya sedang belajar membuat website menggunakan <strong>HTML, CSS, dan Bootstrap</strong>.
+        Website ini adalah portofolio sederhana untuk menampilkan informasi tentang saya, keterampilan, serta sertifikasi yang sudah saya capai.
       </p>
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills" class="p-5 bg-light">
     <div class="container">
       <h2 class="mb-4 text-center">Skill</h2>
@@ -99,7 +150,7 @@
     </div>
   </section>
 
-  <!-- Certification Section -->
+  <!-- Certification -->
   <section id="certification" class="p-5">
     <div class="container">
       <h2 class="mb-4 text-center">Sertifikasi</h2>
@@ -107,70 +158,79 @@
         <!-- Sertifikat 1 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate1.jpg" class="card-img-top" alt="Sertifikat Microsoft Office Specialist">
+            <img src="img/certificate1.jpg" alt="Sertifikat 1" class="card-img-top"
+                 data-bs-toggle="modal" data-bs-target="#certModal1">
             <div class="card-body text-center">
               <h5 class="card-title">Microsoft Office Specialist</h5>
-              <p class="card-text">Sertifikasi Microsoft Excel 2019</p>
             </div>
           </div>
         </div>
+        <!-- Modal Sertifikat 1 -->
+        <div class="modal fade" id="certModal1" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-body text-center">
+                <img src="img/certificate1.jpg" class="img-fluid rounded" alt="Sertifikat 1">
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Sertifikat 2 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate2.jpg" class="card-img-top" alt="Sertifikat Basic English">
+            <img src="img/certificate2.jpg" alt="Sertifikat 2" class="card-img-top"
+                 data-bs-toggle="modal" data-bs-target="#certModal2">
             <div class="card-body text-center">
               <h5 class="card-title">Basic English Education</h5>
-              <p class="card-text">Sertifikasi Bahasa Inggris oleh LDC Laboratory</p>
             </div>
           </div>
         </div>
+        <div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-body text-center">
+                <img src="img/certificate2.jpg" class="img-fluid rounded" alt="Sertifikat 2">
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Sertifikat 3 -->
         <div class="col-md-4">
           <div class="card shadow-sm h-100">
-            <img src="img/certificate3.jpg" class="card-img-top" alt="Sertifikat Professional Network">
+            <img src="img/certificate3.jpg" alt="Sertifikat 3" class="card-img-top"
+                 data-bs-toggle="modal" data-bs-target="#certModal3">
             <div class="card-body text-center">
               <h5 class="card-title">Professional Networking</h5>
-              <p class="card-text">Webinar oleh ESCN Laboratory</p>
             </div>
           </div>
         </div>
-        <!-- Sertifikat 4 -->
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100">
-            <img src="img/certificate4.jpg" class="card-img-top" alt="Sertifikat AI dan ML">
-            <div class="card-body text-center">
-              <h5 class="card-title">Artificial Intelligence & Machine Learning</h5>
-              <p class="card-text">Sertifikat oleh Institut Teknologi PLN</p>
+        <div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-body text-center">
+                <img src="img/certificate3.jpg" class="img-fluid rounded" alt="Sertifikat 3">
+              </div>
             </div>
           </div>
         </div>
-        <!-- Sertifikat 5 -->
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100">
-            <img src="img/certificate5.jpg" class="card-img-top" alt="Sertifikat R Fundamental">
-            <div class="card-body text-center">
-              <h5 class="card-title">R Fundamental For Data Science</h5>
-              <p class="card-text">Sertifikasi oleh DQ Lab</p>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="p-5 bg-light">
     <div class="container">
       <h2 class="mb-4 text-center">Kontak</h2>
-
       <div class="text-center mb-4">
         <p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
         <p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
         <p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/6285756963137" target="_blank">Chat via WhatsApp</a></p>
-        <p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_?igsh=b3F3cWF2c2NwdGo4" target="_blank">@faellaurentt_</a></p>
-        <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205?_t=ZS-90ACnH7mdcq&_r=1" target="_blank">@yee_1205</a></p>
+        <p><i class="bi bi-instagram text-warning"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/faellaurentt_" target="_blank">@faellaurentt_</a></p>
+        <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205" target="_blank">@yee_1205</a></p>
       </div>
-
       <form class="mx-auto" style="max-width:600px;">
         <div class="mb-3">
           <label for="name" class="form-label">Nama</label>
@@ -196,7 +256,32 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dark/Light Mode dengan LocalStorage -->
+  <script>
+    const toggleBtn = document.getElementById("toggleMode");
+    const body = document.body;
+
+    // Cek preferensi sebelumnya
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      toggleBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.add("transitioning");
+      setTimeout(() => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          toggleBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+          localStorage.setItem("theme", "dark");
+        } else {
+          toggleBtn.innerHTML = '<i class="bi bi-moon-fill"></i>';
+          localStorage.setItem("theme", "light");
+        }
+        body.classList.remove("transitioning");
+      }, 50);
+    });
+  </script>
 </body>
 </html>
-
-
