@@ -10,9 +10,11 @@
 <meta name="keywords" content="Rafael Laurent Wowiling, Portofolio, Mahasiswa IT-PLN, Web Developer, Desainer, Sertifikasi">
 <meta name="author" content="Rafael Laurent Wowiling">
 
-<!-- Bootstrap CSS -->
+<!-- Bootstrap CSS & Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Custom CSS -->
 <link rel="stylesheet" href="style.css">
 
 <style>
@@ -40,7 +42,7 @@ h2 { font-weight:bold; color:#333; margin-bottom:20px; }
 .card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.2); }
 
 /* Certification */
-#certification img { max-height:220px; object-fit:cover; }
+#certification img { max-height:220px; object-fit:cover; cursor:pointer; }
 
 /* Contact */
 #contact a { text-decoration:none; }
@@ -155,40 +157,38 @@ footer { font-size:14px; letter-spacing:1px; }
 <div class="modal fade" id="certModal4"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate4.jpg" class="img-fluid"></div></div></div></div>
 <div class="modal fade" id="certModal5"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/certificate5.jpg" class="img-fluid"></div></div></div></div>
 
-<!-- Gallery -->
+<!-- Galeri Foto -->
 <section id="gallery" class="p-5 bg-light fade-in">
 <div class="container">
-<h2 class="text-center mb-4">Galeri Foto Diri</h2>
+<h2 class="text-center mb-4">Galeri Foto</h2>
 <div class="row g-4">
-<div class="col-md-4"><img src="img/gallery1.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#galleryModal1"></div>
-<div class="col-md-4"><img src="img/gallery2.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#galleryModal2"></div>
-<div class="col-md-4"><img src="img/gallery3.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#galleryModal3"></div>
+<div class="col-md-4"><img src="img/foto1.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#photo1"></div>
+<div class="col-md-4"><img src="img/foto2.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#photo2"></div>
+<div class="col-md-4"><img src="img/foto3.jpg" class="img-fluid rounded shadow" data-bs-toggle="modal" data-bs-target="#photo3"></div>
 </div>
 </div>
 </section>
 
-<!-- Gallery Modals -->
-<div class="modal fade" id="galleryModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery1.jpg" class="img-fluid"></div></div></div></div>
-<div class="modal fade" id="galleryModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery2.jpg" class="img-fluid"></div></div></div></div>
-<div class="modal fade" id="galleryModal3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/gallery3.jpg" class="img-fluid"></div></div></div></div>
+<!-- Photo Modals -->
+<div class="modal fade" id="photo1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto1.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="photo2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto2.jpg" class="img-fluid"></div></div></div></div>
+<div class="modal fade" id="photo3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="img/foto3.jpg" class="img-fluid"></div></div></div></div>
 
-<!-- Hobby -->
-<section id="hobby" class="p-5 fade-in bg-light">
-<div class="container text-center">
-<h2 class="mb-4">Hobi</h2>
-<div class="row g-4 justify-content-center">
-<div class="col-md-3">
-<div class="card shadow-sm p-3" data-bs-toggle="modal" data-bs-target="#hobbyModal1">
-<i class="bi bi-controller display-4 text-primary mb-2"></i>
-<h5>Gaming</h5>
-<p>Main game strategi & FPS</p>
+<!-- Hobi -->
+<section id="hobby" class="p-5 fade-in">
+<div class="container">
+<h2 class="text-center mb-4">Hobi</h2>
+<div class="row text-center g-4">
+<div class="col-md-6">
+<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobby1">
+<i class="bi bi-controller display-4 text-primary mb-3"></i>
+<h4>Main Game</h4>
 </div>
 </div>
-<div class="col-md-3">
-<div class="card shadow-sm p-3" data-bs-toggle="modal" data-bs-target="#hobbyModal2">
-<i class="bi bi-circle-half display-4 text-success mb-2"></i>
-<h5>Billiard</h5>
-<p>Kompetisi lokal & santai</p>
+<div class="col-md-6">
+<div class="card shadow-sm p-4" data-bs-toggle="modal" data-bs-target="#hobby2">
+<i class="bi bi-basket display-4 text-success mb-3"></i>
+<h4>Billiard</h4>
 </div>
 </div>
 </div>
@@ -196,13 +196,13 @@ footer { font-size:14px; letter-spacing:1px; }
 </section>
 
 <!-- Hobby Modals -->
-<div class="modal fade" id="hobbyModal1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Gaming</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="img/hobby-gaming.jpg" class="img-fluid mb-3"><p>Saya suka bermain game strategi dan FPS untuk melatih strategi dan teamwork.</p></div></div></div></div>
-<div class="modal fade" id="hobbyModal2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Billiard</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="img/hobby-billiard.jpg" class="img-fluid mb-3"><p>Saya menikmati bermain billiard, melatih presisi dan konsentrasi.</p></div></div></div></div>
+<div class="modal fade" id="hobby1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Main Game</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Saya suka bermain game untuk refresh dan strategi berpikir. Contohnya: Valorant, Mobile Legends, dan Chess.</p></div></div></div></div>
+<div class="modal fade" id="hobby2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Billiard</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Billiard adalah hobi yang melatih fokus dan ketelitian. Saya sering bermain bersama teman di akhir pekan.</p></div></div></div></div>
 
 <!-- Contact -->
-<section id="contact" class="p-5 fade-in bg-light">
+<section id="contact" class="p-5 bg-light fade-in">
 <div class="container">
-<h2 class="mb-4 text-center">Kontak</h2>
+<h2 class="text-center mb-4">Kontak</h2>
 <div class="text-center mb-4">
 <p><i class="bi bi-telephone-fill text-primary"></i> <strong>Nomor HP:</strong> <a href="tel:085756963137">0857-5696-3137</a></p>
 <p><i class="bi bi-envelope-fill text-danger"></i> <strong>Email:</strong> <a href="mailto:faelwowiling3006@gmail.com">faelwowiling3006@gmail.com</a></p>
@@ -211,17 +211,27 @@ footer { font-size:14px; letter-spacing:1px; }
 <p><i class="bi bi-tiktok"></i> <strong>TikTok:</strong> <a href="https://www.tiktok.com/@yee_1205?_t=ZS-90ACnH7mdcq&_r=1" target="_blank">@yee_1205</a></p>
 </div>
 
-<form class="mx-auto" style="max-width:600px;" action="https://formspree.io/f/mnqxyzab" method="POST">
+<form class="mx-auto" style="max-width:600px;" action="https://formspree.io/f/mdkwgryq" method="POST">
 <input type="hidden" name="_next" value="thankyou.html">
-<div class="mb-3"><label for="name" class="form-label">Nama</label><input type="text" class="form-control" id="name" name="name" required></div>
-<div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email" name="email" required></div>
-<div class="mb-3"><label for="message" class="form-label">Pesan</label><textarea class="form-control" id="message" name="message" rows="3" required></textarea></div>
+<div class="mb-3">
+<label for="name" class="form-label">Nama</label>
+<input type="text" class="form-control" id="name" name="name" required>
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Email</label>
+<input type="email" class="form-control" id="email" name="email" required>
+</div>
+<div class="mb-3">
+<label for="message" class="form-label">Pesan</label>
+<textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+</div>
 <button type="submit" class="btn btn-primary w-100">Kirim</button>
 </form>
+</div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center p-3 fade-in">
+<footer class="bg-dark text-white text-center p-3">
 <p>&copy; 2025 Rafael Laurent Wowiling | Portofolio</p>
 </footer>
 
@@ -229,24 +239,17 @@ footer { font-size:14px; letter-spacing:1px; }
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Dark/Light Mode
-const toggle = document.getElementById("toggleMode");
-const body = document.body;
-const icon = toggle.querySelector("i");
-if(localStorage.getItem("mode")==="dark"){ body.classList.add("dark-mode"); icon.className="bi bi-sun-fill"; }
-toggle.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  if(body.classList.contains("dark-mode")){ icon.className="bi bi-sun-fill"; localStorage.setItem("mode","dark"); }
-  else{ icon.className="bi bi-moon-fill"; localStorage.setItem("mode","light"); }
-});
+// Dark/Light Mode Toggle
+const toggleBtn = document.getElementById('toggleMode');
+toggleBtn.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
 
-// Fade-in scroll
-const faders = document.querySelectorAll(".fade-in");
-const appearOptions = { threshold:0.1 };
-const appearOnScroll = new IntersectionObserver((entries, observer)=>{
-entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add("visible"); observer.unobserve(entry.target); } });
+// Fade-in Scroll
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }});
 }, appearOptions);
-faders.forEach(fader => appearOnScroll.observe(fader));
+faders.forEach(fader => { appearOnScroll.observe(fader); });
 </script>
 
 </body>
